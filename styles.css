@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #0c192c;
+    font-family: "Dancing Script","Quicksand";}
+li, a, button,#logotext{
+    font-family: "Dancing Script","Quicksand";
+    font-weight: 500;
+    font-size: 16px;
+    font-stretch: expanded;
+    color:#edf0f1;
+    text-decoration:none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #24252a;
+}
+
+.logo,#logotext{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav_links{
+    list-style: none;
+    border-bottom: #edf0f1;
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+
+}
+
+.nav_links li a{
+    transition: all 0.25s ease-out 0s;
+}
+
+.nav_links li a:hover{
+color: rgb(0, 170, 255);
+}
+
+button{
+ margin-left: 20px;
+ padding: 9px 25px;
+ background-color:rgb(63, 157, 224)  ;
+ transition: all 0.25s ease-out 0s;
+ border-radius: 50px;
+ border: none;
+ cursor: pointer;
+}
+
+button:hover{
+    background-color:rgb(224, 177, 91) ;
+    color:black ;}
+.cont,.cont1{
+    margin: 30px;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image{
+    background-color: #24252a;
+    position: relative;
+    flex: 1;
+    max-width: 640px;
+    height: 360px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.image img{
+    opacity: 0.65;
+    position: relative;
+    vertical-align: top;
+    transition: 0.6s;
+    transition-property: opacity;
+}
+
+.image:hover img{
+    opacity: 1;
+}
+
+.image .detes{
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    color: #c8c9d0;
+    width: 100%;
+    height: 100%;
+}
+
+.image .detes h2{
+    text-align: center;
+    font-size:3em ;
+    font-weight: 300;
+    margin-top: 70px;
+    transition:0.4s ;
+    transition-property: transform;   
+}
+
+.image .detes h2 span{
+font-weight: 900;
+}
+
+.image:hover .detes h2{
+    transform:translateY(-30px) ;
+}
+
+.image .detes p{
+    margin: 30px 30px 0px 30px;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition:0.6s;
+    transition-property:opacity, tranform ;
+}
+.image:hover .detes p{
+    opacity: 1;
+    transform: translateY(-40px);
+}
+.more{
+    position: absolute;
+    background: rgba(38, 36, 68, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+}
+
+.image:hover .more{
+    bottom: 0px;
+}
+
+.read-more{
+    color: #000000;
+    font-weight: 900;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+@media(max-width:1080px){
+    .image{
+        flex:100%;
+        max-width:640px;
+    }
+}
+
+.box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #0c192c;
+}
+
+.box:before{
+    content:'';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    right: -2px;
+    left: -2px;
+    background: #fff;
+    z-index: -1;
+}
+
+.box:after{
+    content:'';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    right: -2px;
+    left: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+#box1:before,#box1:after{
+    background: linear-gradient(235deg,#89ff00,#0c192c,#00bcd4);
+}
+#box2:before,#box2:after{
+    background: linear-gradient(235deg,#ff1500,#0c192c,#00bcd4);
+}
+#box3:before,#box3:after{
+    background: linear-gradient(235deg,#7300ff,#0c192c,#00bcd4);
+}
+#box4:before,#box4:after{
+    background: linear-gradient(235deg,#ffee00,#0c192c,#00bcd4);
+}
+#box5:before,#box5:after{
+    background: linear-gradient(235deg,#f700ff,#0c192c,#00bcd4);
+}
+.content{
+    padding: 20px;
+    color: #fff;
+}
+.row1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.cont1{
+    justify-content: space-around;
+    position: relative;
+}
+
+footer{
+    background-color: #24252a;
+}
+.footercontainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #24252a;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color:#fff ;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+    background-color: rgb(63, 157, 224);
+    transition: 0.5s;
+}
+.footernav ul{
+    display: flex;
+    justify-content: space-around;
+}
+.footerNav{
+    margin: 30px 0px;
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 70px;
+    left: -700px;
+    width: 700px;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: black;
+    padding: 35px;
+}
+
+.slide .content h1 {
+    margin-bottom: 10px;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(700px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.buttons button:hover {
+    background-color: white;
+    color: #333;
+    transition: all 0.3s ease-in;
+}
+
+.buttons button#next {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+}
+
+.buttons button#prev {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+@media(max-width: 500px) {
+    .slide .content {
+        bottom: -300px;
+        left: 0;
+        width: 100%;
+    }
+
+    .slide.current .content {
+        transform: translateY(-300px);
+    }
+}
+
+
+.slide:first-child {
+    background: url(https://www.iitk.ac.in/che/chemineers/assets/homepage/c.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(2) {
+    background: url(1.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(3) {
+    background: url(4.jpg) no-repeat center center/cover;
+}
+
+.slide:nth-child(4) {
+    background: url(3.jpg) no-repeat center center/cover;
+}
+
+#events{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+}
+.slide .content p{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.read-more{
+    color: #edf0f1;
+}
